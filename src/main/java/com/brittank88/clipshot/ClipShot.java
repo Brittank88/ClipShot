@@ -26,14 +26,26 @@ public class ClipShot {
     @SuppressWarnings("unused")
     public static CommonProxy proxy;
 
+    /**
+     * Run before anything else.
+     * <p>
+     * Read your config, create blocks, items, etc., and register them with the GameRegistry.
+     *
+     * @param event The pre-initialisation event.
+     */
     @Mod.EventHandler
     @SuppressWarnings("unused")
-    // preInit "Run before anything else. Read your config, create blocks, items, etc., and register them with the
-    // GameRegistry." (Remove if not needed)
     public void preInit(FMLPreInitializationEvent event) {
         proxy.preInit(event);
     }
 
+    /**
+     * Do your mod setup.
+     * <p>
+     * Build whatever data structures you care about. Register recipes.
+     *
+     * @param event The initialisation event.
+     */
     @Mod.EventHandler
     @SuppressWarnings("unused")
     // load "Do your mod setup. Build whatever data structures you care about. Register recipes." (Remove if not needed)
