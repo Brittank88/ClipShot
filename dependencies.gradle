@@ -35,4 +35,7 @@
  */
 dependencies {
     runtimeOnlyNonPublishable("com.github.GTNewHorizons:NotEnoughItems:2.5.4-GTNH:dev")
+
+    // This library loads in OSX, but not in Windows - I'm including it here so I can compile on Windows.
+    implementation "ca.weblite:java-objc-bridge:1.0.0"
 }
