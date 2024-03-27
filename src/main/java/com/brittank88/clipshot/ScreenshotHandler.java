@@ -1,6 +1,6 @@
 package com.brittank88.clipshot;
 
-import static com.brittank88.clipshot.ClipShot.MODID;
+import static com.brittank88.clipshot.ClipShot.MOD_ID;
 import static net.minecraft.client.Minecraft.isRunningOnMac;
 
 import java.awt.Toolkit;
@@ -16,7 +16,7 @@ import org.apache.logging.log4j.Logger;
 
 public abstract class ScreenshotHandler {
 
-    public static final Logger LOG = LogManager.getLogger(MODID + ".DefaultHandler");
+    public static final Logger LOG = LogManager.getLogger(MOD_ID + ".DefaultHandler");
 
     public static void handleScreenshot(BufferedImage bufferedImage) {
         if (isRunningOnMac) {

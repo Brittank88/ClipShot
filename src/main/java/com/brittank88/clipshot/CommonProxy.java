@@ -3,6 +3,9 @@ package com.brittank88.clipshot;
 import java.awt.HeadlessException;
 import java.awt.Toolkit;
 
+import com.brittank88.clipshot.config.ConfigurationHandler;
+
+import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 
@@ -15,6 +18,12 @@ public class CommonProxy {
         if (event.getSide()
             .isServer())
             ClipShot.LOG.warn("ClipShot will do nothing on a dedicated server as it is a client-only mod!");
+
+        // Initialise the configuration file.
+        ConfigurationHandler.init(event.getSuggestedConfigurationFile());
+        FMLCommonHandler.instance()
+            .bus()
+            .register(new ConfigurationHandler());
     }
 
     // load "Do your mod setup. Build whatever data structures you care about. Register recipes." (Remove if not needed)

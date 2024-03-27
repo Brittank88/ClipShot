@@ -13,8 +13,8 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
-import com.brittank88.clipshot.Config;
 import com.brittank88.clipshot.ScreenshotHandler;
+import com.brittank88.clipshot.config.ConfigurationHandler;
 import com.llamalad7.mixinextras.sugar.Local;
 
 @Mixin(ScreenShotHelper.class)
@@ -32,7 +32,7 @@ public abstract class ScreenShotHelperMixin {
 
         ScreenshotHandler.handleScreenshot(bufferedImage);
 
-        if (!Config.saveFile) {
+        if (!ConfigurationHandler.saveScreenshotsAsFiles) {
             cir.setReturnValue(new ChatComponentTranslation("screenshot.copy_success"));
             cir.cancel();
         }
