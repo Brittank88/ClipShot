@@ -15,9 +15,11 @@ public class ClipShot {
     public static final Logger LOG = LogManager.getLogger(MODID);
 
     @SidedProxy(clientSide = "com.brittank88.clipshot.ClientProxy", serverSide = "com.brittank88.clipshot.CommonProxy")
+    @SuppressWarnings("unused")
     public static CommonProxy proxy;
 
     @Mod.EventHandler
+    @SuppressWarnings("unused")
     // preInit "Run before anything else. Read your config, create blocks, items, etc., and register them with the
     // GameRegistry." (Remove if not needed)
     public void preInit(FMLPreInitializationEvent event) {
@@ -25,6 +27,7 @@ public class ClipShot {
     }
 
     @Mod.EventHandler
+    @SuppressWarnings("unused")
     // load "Do your mod setup. Build whatever data structures you care about. Register recipes." (Remove if not needed)
     public void init(FMLInitializationEvent event) {
         proxy.init(event);

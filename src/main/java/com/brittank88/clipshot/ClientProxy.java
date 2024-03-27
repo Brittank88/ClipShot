@@ -2,6 +2,7 @@ package com.brittank88.clipshot;
 
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 
+@SuppressWarnings("unused")
 public class ClientProxy extends CommonProxy {
 
     // Override CommonProxy methods here, if you want a different behaviour on the client (e.g. registering renders).

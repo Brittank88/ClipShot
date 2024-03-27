@@ -3,10 +3,13 @@ pluginManagement {
     repositories {
         maven {
             // RetroFuturaGradle
+            //noinspection GroovyAssignabilityCheck
             name "GTNH Maven"
             url "https://nexus.gtnewhorizons.com/repository/public/"
             mavenContent {
+                //noinspection GroovyAssignabilityCheck
                 includeGroup("com.gtnewhorizons")
+                //noinspection GroovyAssignabilityCheck
                 includeGroupByRegex("com\\.gtnewhorizons\\..+")
             }
         }
@@ -17,5 +20,6 @@ pluginManagement {
 }
 
 plugins {
+    //noinspection GroovyAssignabilityCheck
     id 'com.gtnewhorizons.gtnhsettingsconvention' version '1.0.19'
 }

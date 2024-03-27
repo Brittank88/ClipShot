@@ -18,7 +18,7 @@ public class CommonProxy {
     }
 
     // load "Do your mod setup. Build whatever data structures you care about. Register recipes." (Remove if not needed)
-    public void init(FMLInitializationEvent event) {
+    public void init(@SuppressWarnings("unused") FMLInitializationEvent event) {
         ClipShot.LOG.info("Getting system clipboard via AWT...");
 
         try {

@@ -27,14 +27,13 @@ public abstract class ScreenshotHandler {
         LOG.debug("Copying screenshot to clipboard using AWT...");
 
         new Thread(
-            () -> {
-                Toolkit.getDefaultToolkit()
-                    .getSystemClipboard()
-                    .setContents(new TransferableImage(bufferedImage), null);
-            },
+            () -> Toolkit.getDefaultToolkit()
+                .getSystemClipboard()
+                .setContents(new TransferableImage(bufferedImage), null),
             "Screenshot to Clipboard Copy").start();
     }
 
+    @SuppressWarnings("ClassCanBeRecord")
     private static class TransferableImage implements Transferable {
 
         private final BufferedImage bufferedImage;
