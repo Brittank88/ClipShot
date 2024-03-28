@@ -1,7 +1,6 @@
 package com.brittank88.clipshot;
 
 import static com.brittank88.clipshot.ClipShot.MOD_ID;
-import static net.minecraft.client.Minecraft.isRunningOnMac;
 
 import java.awt.Toolkit;
 import java.awt.datatransfer.DataFlavor;
@@ -19,10 +18,6 @@ public abstract class ScreenshotHandler {
     public static final Logger LOG = LogManager.getLogger(MOD_ID + ".DefaultHandler");
 
     public static void handleScreenshot(BufferedImage bufferedImage) {
-        if (isRunningOnMac) {
-            LOG.warn("Method handleScreenshotAWT called on a MacOS system! Skipping execution...");
-            return;
-        }
 
         LOG.debug("Copying screenshot to clipboard using AWT...");
 
